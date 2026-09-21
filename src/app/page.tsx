@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { PORTFOLIO_DATA, ProjectCategory } from "@/data/portfolio";
@@ -19,7 +19,7 @@ import {
   FileDown,
   Layers,
   Phone,
-  Filter
+  Filter,
 } from "lucide-react";
 
 export default function Home() {
@@ -28,39 +28,47 @@ export default function Home() {
   const { personal, stats, projects, skillGroups, experience } = PORTFOLIO_DATA;
 
   const t = {
-    heroTag: lang === "uz" ? "Ishga va yangi loyihalarga tayyor" : "Available for new roles & projects",
+    heroTag:
+      lang === "uz"
+        ? "Yangi loyihalar va hamkorlikka tayyorman"
+        : "Available for new roles & projects",
     greeting: lang === "uz" ? "Salom, men" : "Hello, I am",
-    viewProjects: lang === "uz" ? "Loyihalarni ko'rish" : "Explore Projects",
+    viewProjects: lang === "uz" ? "Loyihalarim" : "View Projects",
     contactMe: lang === "uz" ? "Bog'lanish" : "Contact Me",
     experienceTitle: lang === "uz" ? "Ish Tajribasi" : "Work Experience",
     experienceDesc:
       lang === "uz"
-        ? "Kompaniyalardagi real ishlab chiqarish va amaliy loyihalar tajribasi"
-        : "Production track record and enterprise development experience",
-    projectsTitle: lang === "uz" ? "Loyihalarim" : "Featured Projects",
+        ? "Jamoaviy va korporativ loyihalarda orttirilgan amaliy tajriba"
+        : "Production experience in corporate and collaborative software projects",
+    projectsTitle: lang === "uz" ? "Asosiy Loyihalarim" : "Featured Projects",
     projectsDesc:
       lang === "uz"
-        ? "Frontend, Flutter va Android yo'nalishlarida amalga oshirilgan barcha ishlarim"
-        : "Real-world web, Flutter and native Android applications built with modern stack",
+        ? "Frontend, Flutter va Android yo'nalishlarida amalga oshirilgan amaliy ishlarim"
+        : "Web, Flutter, and native Android applications built with modern engineering standards",
     allProjects: lang === "uz" ? "Barchasi" : "All",
     frontendTab: "Web & Frontend",
     flutterTab: "Flutter Apps",
     androidTab: "Android (Kotlin)",
-    skillsTitle: lang === "uz" ? "Texnologiyalar & Stack" : "Tech Stack & Skills",
+    skillsTitle:
+      lang === "uz" ? "Texnologiyalar & Stack" : "Tech Stack & Skills",
     skillsDesc:
       lang === "uz"
-        ? "Ishlab chiqarishda faol qo'llaydigan instrument va texnologiyalarim"
-        : "Core toolset and architectural knowledge applied in production",
+        ? "Ishlab chiqish jarayonida muntazam qo'llaydigan asosiy texnologiyalarim"
+        : "Core tools and technologies I use to build robust digital products",
     liveDemo: lang === "uz" ? "Saytni ko'rish" : "Live Demo",
     sourceCode: lang === "uz" ? "GitHub Kod" : "Source Code",
-    downloadFrontendResume: lang === "uz" ? "Frontend CV (PDF)" : "Frontend CV (PDF)",
-    downloadFlutterResume: lang === "uz" ? "Flutter CV (PDF)" : "Flutter CV (PDF)",
-    rights: lang === "uz" ? "Barcha huquqlar himoyalangan" : "All rights reserved",
-    letsWork: lang === "uz" ? "Keling, birgalikda ishlaymiz!" : "Let's build something impactful!",
+    downloadFrontendResume:
+      lang === "uz" ? "Frontend CV (PDF)" : "Frontend CV (PDF)",
+    downloadFlutterResume:
+      lang === "uz" ? "Flutter CV (PDF)" : "Flutter CV (PDF)",
+    rights:
+      lang === "uz" ? "Barcha huquqlar himoyalangan" : "All rights reserved",
+    letsWork:
+      lang === "uz" ? "Keling, birgalikda ishlaymiz" : "Let's work together",
     letsWorkDesc:
       lang === "uz"
-        ? "Yangi loyiha, startap yoki jamoangiz uchun kuchli dasturchi kerak bo'lsa, men bilan bog'laning."
-        : "Open for full-time roles, freelance projects, and engineering collaborations.",
+        ? "Yangi loyiha, hamkorlik yoki bo'sh ish o'rni bo'yicha takliflarga doim ochiqman. Men bilan qulay usulda bog'lanishingiz mumkin."
+        : "Open for full-time opportunities, high-impact projects, and engineering collaborations. Feel free to get in touch.",
   };
 
   const filteredProjects =
@@ -78,7 +86,10 @@ export default function Home() {
       {/* Header */}
       <header className="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800/80">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-          <a href="#" className="flex items-center gap-2 text-lg font-bold tracking-tight group">
+          <a
+            href="#"
+            className="flex items-center gap-2 text-lg font-bold tracking-tight group"
+          >
             <span className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-slate-950 font-black text-sm group-hover:scale-105 transition-transform">
               BI
             </span>
@@ -89,16 +100,28 @@ export default function Home() {
 
           <div className="flex items-center gap-4">
             <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
-              <a href="#experience" className="hover:text-cyan-400 transition-colors">
+              <a
+                href="#experience"
+                className="hover:text-cyan-400 transition-colors"
+              >
                 {lang === "uz" ? "Tajriba" : "Experience"}
               </a>
-              <a href="#projects" className="hover:text-cyan-400 transition-colors">
+              <a
+                href="#projects"
+                className="hover:text-cyan-400 transition-colors"
+              >
                 {lang === "uz" ? "Loyihalar" : "Projects"}
               </a>
-              <a href="#skills" className="hover:text-cyan-400 transition-colors">
+              <a
+                href="#skills"
+                className="hover:text-cyan-400 transition-colors"
+              >
                 {lang === "uz" ? "Ko'nikmalar" : "Skills"}
               </a>
-              <a href="#contact" className="hover:text-cyan-400 transition-colors">
+              <a
+                href="#contact"
+                className="hover:text-cyan-400 transition-colors"
+              >
                 {lang === "uz" ? "Aloqa" : "Contact"}
               </a>
             </nav>
@@ -214,7 +237,10 @@ export default function Home() {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-16 px-4 sm:px-6 max-w-6xl mx-auto w-full">
+      <section
+        id="experience"
+        className="py-16 px-4 sm:px-6 max-w-6xl mx-auto w-full"
+      >
         <div className="mb-10">
           <div className="flex items-center gap-2 text-cyan-400 text-sm font-semibold mb-2">
             <Briefcase className="w-4 h-4" />
@@ -238,15 +264,29 @@ export default function Home() {
                 <div>
                   <h3 className="text-xl sm:text-2xl font-bold text-white flex items-center gap-3">
                     <span>{item.company}</span>
-                    {item.domain.startsWith("build") && (
-                      <a
-                        href={`https://${item.domain}`}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 hover:bg-cyan-500/20 inline-flex items-center gap-1"
-                      >
-                        {item.domain} <ExternalLink className="w-3 h-3" />
-                      </a>
+                    {item.company === "Techsoft" ? (
+                      <span className="inline-flex items-center gap-2">
+                        <a
+                          href="https://uyqurilish.uz"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/30 hover:bg-cyan-500/20 inline-flex items-center gap-1"
+                        >
+                          uyqurilish.uz <ExternalLink className="w-3 h-3" />
+                        </a>
+                        <a
+                          href="https://builderp.uz"
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-slate-800 text-slate-300 border border-slate-700 hover:bg-slate-700 inline-flex items-center gap-1"
+                        >
+                          builderp.uz <ExternalLink className="w-3 h-3" />
+                        </a>
+                      </span>
+                    ) : (
+                      <span className="text-xs font-medium text-slate-400">
+                        {item.domain}
+                      </span>
                     )}
                   </h3>
                   <p className="text-cyan-400 font-semibold text-sm sm:text-base mt-0.5">
@@ -278,7 +318,10 @@ export default function Home() {
       </section>
 
       {/* Projects Section with Filtering */}
-      <section id="projects" className="py-16 px-4 sm:px-6 max-w-6xl mx-auto w-full">
+      <section
+        id="projects"
+        className="py-16 px-4 sm:px-6 max-w-6xl mx-auto w-full"
+      >
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
           <div>
             <div className="flex items-center gap-2 text-cyan-400 text-sm font-semibold mb-2">
@@ -341,7 +384,10 @@ export default function Home() {
         {/* Project Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {filteredProjects.map((project) => {
-            const isHighlight = project.id === "uyqurilish" || project.id === "builderp" || project.id === "sqb-mobile";
+            const isHighlight =
+              project.id === "uyqurilish" ||
+              project.id === "builderp" ||
+              project.id === "sqb-mobile";
 
             return (
               <div
@@ -356,9 +402,15 @@ export default function Home() {
                   <div className="flex items-start justify-between gap-4 mb-3">
                     <div className="flex items-center gap-3">
                       <span className="p-2.5 rounded-xl bg-slate-800/80 border border-slate-700/60 text-cyan-400">
-                        {project.category === "frontend" && <Globe className="w-5 h-5" />}
-                        {project.category === "flutter" && <Smartphone className="w-5 h-5" />}
-                        {project.category === "android" && <Terminal className="w-5 h-5" />}
+                        {project.category === "frontend" && (
+                          <Globe className="w-5 h-5" />
+                        )}
+                        {project.category === "flutter" && (
+                          <Smartphone className="w-5 h-5" />
+                        )}
+                        {project.category === "android" && (
+                          <Terminal className="w-5 h-5" />
+                        )}
                       </span>
                       <div>
                         <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-cyan-300 transition-colors">
@@ -433,7 +485,10 @@ export default function Home() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-16 px-4 sm:px-6 max-w-6xl mx-auto w-full">
+      <section
+        id="skills"
+        className="py-16 px-4 sm:px-6 max-w-6xl mx-auto w-full"
+      >
         <div className="mb-10">
           <div className="flex items-center gap-2 text-cyan-400 text-sm font-semibold mb-2">
             <Cpu className="w-4 h-4" />
@@ -479,7 +534,10 @@ export default function Home() {
       </section>
 
       {/* Call to Action & Contact */}
-      <section id="contact" className="py-16 px-4 sm:px-6 max-w-6xl mx-auto w-full">
+      <section
+        id="contact"
+        className="py-16 px-4 sm:px-6 max-w-6xl mx-auto w-full"
+      >
         <div className="rounded-3xl bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800 p-8 sm:p-12 relative overflow-hidden text-center">
           <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-96 h-96 bg-cyan-500/10 blur-[100px] pointer-events-none" />
 
@@ -524,41 +582,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="mt-auto border-t border-slate-850 bg-slate-950/90 py-8 px-4 sm:px-6">
-        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-          <div>
-            © {new Date().getFullYear()} {personal.name}. {t.rights}.
-          </div>
-          <div className="flex items-center gap-4">
-            <a
-              href={personal.github}
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-cyan-400 transition-colors flex items-center gap-1"
-            >
-              <GithubIcon className="w-3.5 h-3.5" /> GitHub
-            </a>
-            <a
-              href="https://uyqurilish.uz"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-cyan-400 transition-colors flex items-center gap-1"
-            >
-              <Globe className="w-3.5 h-3.5" /> UyQurilish.uz
-            </a>
-            <a
-              href="https://builderp.uz"
-              target="_blank"
-              rel="noreferrer"
-              className="hover:text-cyan-400 transition-colors flex items-center gap-1"
-            >
-              <Globe className="w-3.5 h-3.5" /> BuildERP.uz
-            </a>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
